@@ -2,10 +2,11 @@ import kotlin.concurrent.thread
 
 fun main() {
     print("Введите количество лайков: ")
-    var Likes = readLine()?.toInt()
-    if (Likes != null) {
-        if (Likes % 10 == 1) {
-            println("Нравится $Likes человеку")
-        } else println("Нравится $Likes людям")
+    val likes = readLine()?.toInt()
+    if (likes != null) {
+        if (likes % 100 == 11 ) {
+            println("Нравится $likes людям")
+        } else if (likes % 10 == 1) println("Нравится $likes человеку")
+        else println("Нравится $likes людям")
     }
 }
